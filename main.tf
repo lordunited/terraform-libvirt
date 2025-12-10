@@ -32,8 +32,9 @@ resource "libvirt_volume" "vm_disk" {
   name           = "${each.key}"
   pool           = libvirt_pool.storage.name
   # FIX: Change 'stdout' to 'disk_path' to match the jq output
-  source         = libvirt_volume.base_image.id
+# source         = libvirt_volume.base_image.id
   format         = "qcow2" 
+  base_volume_id = libvirt_volume.base_image.id
 }
 
 
@@ -42,6 +43,7 @@ resource "libvirt_volume" "vm_disk" {
 resource "libvirt_cloudinit_disk" "config_disk" {
   for_each = local.vms
   name     = "${each.key}-init.iso"
+  pool     = libvirt_pool.storage.name
   user_data = <<-EOF
     #cloud-config
     users:
