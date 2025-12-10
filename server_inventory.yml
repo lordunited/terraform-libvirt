@@ -1,0 +1,43 @@
+ubuntu-01:
+  os_type: "ubuntu_24.04"
+  ip_suffix: 135
+  cpu: 4
+  memory: 8192
+  ssh_user: "ubuntu"
+  disk_size_gb: 50
+  ip_address: 192.168.1.07
+  ip_gateway: 192.168.1.1
+  ip_subnet: 192.168.1.0/24
+
+ubuntu-02:
+  os_type: "ubuntu_24.04"
+  ip_suffix: 136
+  cpu: 4
+  memory: 8192
+  disk_size_gb: 50
+  ssh_user: "ubuntu"
+  ip_address: 192.168.1.08
+  ip_gateway: 192.168.1.1
+  ip_subnet: 192.168.1.0/24
+
+ubuntu-03:
+  os_type: "ubuntu_24.04"
+  ip_suffix: 137
+  cpu: 4
+  memory: 8192
+  disk_size_gb: 50
+  ssh_user: "ubuntuu"
+  ip_address: 192.168.1.09
+  ip_gateway: 192.168.1.1
+  ip_subnet: 192.168.1.0/24
+
+ubuntu-04:
+  os_type: "ubuntu_24.04"
+  cpu: 4
+  memory: 8192
+  disk_size_gb: 50
+  ssh_user: "ubuntu"
+  ip_address: 192.168.1.10
+  ip_gateway: 192.168.1.1
+  ip_subnet: 192.168.1.0/24
+
